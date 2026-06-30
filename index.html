@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fbfbfd; color: #1d1d1f; overflow-x: hidden; }
-        
+
         /* Animaciones Apple Style */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
@@ -17,7 +17,7 @@
         .animate-reveal { animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
         .delay-1 { animation-delay: 0.2s; opacity: 0; }
         .delay-2 { animation-delay: 0.4s; opacity: 0; }
-        
+
         .glass { background: rgba(255, 255, 255, 0.72); backdrop-filter: saturate(180%) blur(20px); }
         .bento-card { transition: all 0.5s cubic-bezier(0.15, 0.83, 0.66, 1); }
         .bento-card:hover { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.04); }
@@ -31,6 +31,7 @@
             <div class="flex gap-6">
                 <a href="#formacion" class="hover:text-blue-600 transition-colors">Formación</a>
                 <a href="#habilidades" class="hover:text-blue-600 transition-colors">Habilidades</a>
+                <a href="#proyectos" class="hover:text-blue-600 transition-colors">Proyectos</a>
                 <a href="mailto:marifructuosog718@gmail.com" class="bg-black text-white px-3 py-1 rounded-full">Contacto</a>
             </div>
         </div>
@@ -39,17 +40,27 @@
     <header class="pt-32 pb-20 px-6 bg-white">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl animate-reveal border-4 border-white shrink-0">
-                <img src="perfil.jpg" alt="Maria del Carmen Fructuoso Guerrero" class="w-full h-full object-cover">
+                <img src="https://marifructuoso.github.io/CVWeb/perfil.jpg" alt="Maria del Carmen Fructuoso Guerrero" class="w-full h-full object-cover">
             </div>
-            
+
             <div class="text-center md:text-left">
                 <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter animate-reveal delay-1">
                     Hola. Soy Maria.
                 </h1>
                 <p class="mt-6 text-xl md:text-2xl text-gray-500 font-light max-w-xl animate-reveal delay-2">
-                    Estudiante de <span class="text-black font-medium text-blue-600">Desarrollo de Aplicaciones Web</span>.
+                    <span class="text-black font-medium">Junior Developer</span> titulada en DAW con experiencia en automatización en <span class="text-black font-medium">DXC Technology</span>.
                     Me gusta programar, aprender cosas nuevas y trabajar en proyectos donde pueda sumar y ayudar al equipo.
                 </p>
+                <div class="mt-8 flex gap-4 justify-center md:justify-start animate-reveal delay-2">
+                    <a href="https://github.com/MariFructuoso" target="_blank"
+                       class="inline-flex items-center gap-2 bg-black text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/maria-fructuoso-1445163a8/" target="_blank"
+                       class="inline-flex items-center gap-2 bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                        LinkedIn
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -57,10 +68,9 @@
     <section id="formacion" class="max-w-5xl mx-auto px-6 py-20">
         <h2 class="text-3xl font-semibold mb-10 tracking-tight">Formación Académica</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bento-card bg-white rounded-[2rem] p-10 border border-gray-100 relative overflow-hidden">
-                <span class="absolute top-6 right-8 text-blue-600 font-bold text-xs uppercase tracking-widest">En Curso</span>
-                <h3 class="text-2xl font-bold italic text-gray-800">Grado Superior DAW</h3>
-                <p class="text-gray-500 mt-2">Desarrollo de Aplicaciones Web</p>
+            <div class="bento-card bg-white rounded-[2rem] p-10 border border-gray-200 flex flex-col justify-center">
+                <h3 class="text-2xl font-bold italic">Grado Superior DAW</h3>
+                <p class="text-gray-500 mt-1">Desarrollo de Aplicaciones Web</p>
                 <p class="text-sm text-gray-400 mt-1">IES San Vicente | 2022-2025</p>
             </div>
             <div class="bento-card bg-gray-50 rounded-[2rem] p-10 flex flex-col justify-center">
@@ -95,14 +105,105 @@
                 <p class="text-2xl font-bold">Git & GitHub</p>
             </div>
 
-            <div class="md:col-span-2 bento-card bg-zinc-100 rounded-[2rem] p-10">
+            <div class="bento-card bg-zinc-100 rounded-[2rem] p-10">
                 <h3 class="text-xl font-semibold mb-2">Desarrollo de Software</h3>
                 <p class="text-gray-600">Dominio de Java, C#, PHP y Symfony para soluciones robustas.</p>
             </div>
 
-            <div class="md:col-span-2 bento-card bg-white rounded-[2rem] p-10 border border-gray-100 flex items-center">
-                <p class="text-xl italic text-gray-500 italic">"Capacidad de adaptación, trabajo en equipo y gestión eficiente del tiempo."</p>
+            <div class="bento-card bg-purple-600 rounded-[2rem] p-10 text-white">
+                <h3 class="font-bold uppercase text-xs tracking-widest mb-4 opacity-70">QA & Automatización</h3>
+                <p class="text-lg font-semibold">Tosca, SAP, UiPath</p>
             </div>
+
+            <div class="md:col-span-2 bento-card bg-white rounded-[2rem] p-10 border border-gray-100 flex flex-col justify-center">
+                <h3 class="font-bold text-gray-400 uppercase text-xs tracking-widest mb-4">Soft Skills</h3>
+                <p class="text-xl italic text-gray-600">"Capacidad de adaptación, trabajo en equipo y gestión eficiente del tiempo."</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="proyectos" class="max-w-5xl mx-auto px-6 py-20">
+        <h2 class="text-3xl font-semibold mb-10 tracking-tight">Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- DailySnap - Proyecto final destacado -->
+            <div class="md:col-span-2 bento-card bg-black rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between gap-8">
+                <div class="flex-1">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3 block">Proyecto Final DAW</span>
+                    <h3 class="text-2xl font-bold mb-3">DailySnap</h3>
+                    <p class="text-gray-300 mb-6">Red social de fotografía diaria con Angular. Incluye feed, perfiles de usuario, vista de publicación individual y chat en tiempo real.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">Angular</span>
+                        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">TypeScript</span>
+                        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">Tailwind</span>
+                    </div>
+                </div>
+                <div class="flex items-end">
+                    <a href="https://github.com/MariFructuoso/DailySnap" target="_blank"
+                       class="inline-flex items-center gap-2 bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-100 transition-colors">
+                        Ver en GitHub →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pokémon Symfony -->
+            <div class="bento-card bg-white rounded-[2rem] p-8 border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 block">Entorno Servidor</span>
+                    <h3 class="text-xl font-bold mb-2">Pokémon Web App</h3>
+                    <p class="text-gray-500 text-sm mb-5">Aplicación web con Symfony y PHP. BBDD con migraciones, plantillas Twig y Docker.</p>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">PHP</span>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Symfony</span>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Twig</span>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Docker</span>
+                    </div>
+                </div>
+                <a href="https://github.com/MariFructuoso/mi_proyecto_pokemon" target="_blank"
+                   class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline">
+                    Ver en GitHub →
+                </a>
+            </div>
+
+            <!-- Proyecto Angular Inmobiliaria -->
+            <div class="bento-card bg-gray-50 rounded-[2rem] p-8 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 block">Entorno Cliente</span>
+                    <h3 class="text-xl font-bold mb-2">Inmosanvi</h3>
+                    <p class="text-gray-500 text-sm mb-5">Aplicación inmobiliaria SPA desarrollada con Angular y TypeScript.</p>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">Angular</span>
+                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">TypeScript</span>
+                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">CSS</span>
+                    </div>
+                </div>
+                <a href="https://github.com/MariFructuoso/Proyecto-Angular" target="_blank"
+                   class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline">
+                    Ver en GitHub →
+                </a>
+            </div>
+
+            <!-- BasketLeagueManager -->
+            <div class="md:col-span-2 bento-card bg-zinc-100 rounded-[2rem] p-8 flex flex-col md:flex-row justify-between gap-8">
+                <div class="flex-1">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 block">Despliegue de Aplicaciones Web</span>
+                    <h3 class="text-xl font-bold mb-2">BasketLeague Manager</h3>
+                    <p class="text-gray-600 text-sm mb-5">Gestor de liga de baloncesto con Node.js. Autenticación de usuarios, gestión de equipos y sistema de rutas.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">Node.js</span>
+                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">JavaScript</span>
+                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">Nunjucks</span>
+                    </div>
+                </div>
+                <div class="flex items-end">
+                    <a href="https://github.com/MariFructuoso/BasketLeagueManager" target="_blank"
+                       class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline">
+                        Ver en GitHub →
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -110,6 +211,16 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl font-semibold mb-16 tracking-tight">Experiencia</h2>
             <div class="space-y-16">
+
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="w-32 text-gray-400 font-medium">2024 — 2025</div>
+                    <div class="flex-1 border-l-2 border-blue-200 pl-8">
+                        <h3 class="text-xl font-bold">DXC Technology</h3>
+                        <p class="text-blue-600 text-sm font-medium">Prácticas Grado Superior (DAW)</p>
+                        <p class="text-gray-500 mt-4 max-w-2xl">Automatización de procesos con Tosca, SAP y UiPath en entorno empresarial.</p>
+                    </div>
+                </div>
+
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="w-32 text-gray-400 font-medium">2022 — 2023</div>
                     <div class="flex-1 border-l-2 border-gray-100 pl-8">
@@ -130,25 +241,17 @@
         </div>
     </section>
 
-    <footer class="py-20 px-6 border-t border-gray-100">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="flex gap-12 text-center md:text-left">
-                <div>
-                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 italic">Castellano</p>
-                    <p class="text-xl font-medium tracking-tighter">Nativo</p>
-                </div>
-                <div>
-                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 italic">Inglés</p>
-                    <p class="text-xl font-medium tracking-tighter">B1 / Intermedio</p>
-                </div>
-                <div>
-                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 italic">Valenciano</p>
-                    <p class="text-xl font-medium tracking-tighter">Intermedio</p>
-                </div>
+    <footer class="py-10 px-6 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex gap-8 text-sm text-gray-500">
+                <span>Castellano — Nativo</span>
+                <span>Inglés — B1</span>
+                <span>Valenciano — Intermedio</span>
             </div>
-            <div class="mt-12 md:mt-0 text-center md:text-right">
-                <p class="text-gray-400 text-sm">San Vicente del Raspeig</p>
-                <a href="mailto:marifructuosog718@gmail.com" class="text-2xl font-semibold hover:text-blue-600 transition-colors">marifructuosog718@gmail.com</a>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/MariFructuoso" target="_blank" class="text-sm text-gray-500 hover:text-black transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/maria-fructuoso-1445163a8/" target="_blank" class="text-sm text-gray-500 hover:text-blue-600 transition-colors">LinkedIn</a>
+                <a href="mailto:marifructuosog718@gmail.com" class="text-sm font-semibold hover:text-blue-600 transition-colors">marifructuosog718@gmail.com</a>
             </div>
         </div>
     </footer>
