@@ -1,443 +1,758 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Maria Fructuoso - Junior Developer & QA Automation</title>
-  <meta name="description" content="Portfolio profesional de Maria Fructuoso: Junior Developer DAW, QA y Automatización de Procesos.">
-  <meta name="keywords" content="Maria Fructuoso, Junior Developer, DAW, QA, Automatización, Tosca, UiPath, Fullstack">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Fructuoso — Portfolio</title>
+  <meta name="description" content="Portfolio minimalista de Maria Fructuoso: Junior Developer DAW, QA & Automatización.">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Paleta Azul Metálico, Acero y Gris Titanio */
+      --bg: #f4f6f9;
+      --card-bg: rgba(255, 255, 255, 0.82);
+      --card-border: rgba(44, 62, 80, 0.12);
+      --text-main: #141b22;
+      --text-sub: #415062;
+      --text-muted: #6a7c92;
+      
+      --metal-blue: #2c4a6f;
+      --metal-blue-hover: #1e3552;
+      --steel-cyan: #3a75a4;
+      --steel-gradient: linear-gradient(135deg, #1f334d 0%, #3a5d85 100%);
+      
+      --pill-bg: rgba(44, 74, 111, 0.06);
+      --nav-glass: rgba(244, 246, 249, 0.85);
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(58, 117, 164, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 85% 85%, rgba(44, 74, 111, 0.06) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 54px;
+      background: var(--nav-glass);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 max(20px, calc((100% - 980px) / 2));
+    }
+
+    .brand {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--metal-blue);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--steel-cyan);
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--steel-cyan);
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      background: rgba(44, 74, 111, 0.08);
+      padding: 2px;
+      border-radius: 999px;
+      border: 1px solid var(--card-border);
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-sub);
+      cursor: pointer;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: #ffffff;
+      color: var(--metal-blue);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 90px 24px 60px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 60px 0 80px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .hero-content {
+      max-width: 580px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1f5f3e;
+      background: rgba(46, 125, 79, 0.12);
+      border: 1px solid rgba(46, 125, 79, 0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #2e7d4f;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #141b22 30%, #2c4a6f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--steel-cyan);
+      margin-bottom: 16px;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-apple {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--steel-gradient);
+      color: #fff;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 51, 77, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-apple:hover {
+      background: linear-gradient(135deg, #17273a 0%, #2e4b6c 100%);
+      transform: translateY(-1px);
+      color: #fff;
+    }
+
+    .btn-apple-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--metal-blue);
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-apple-secondary:hover {
+      background: #ffffff;
+      border-color: var(--steel-cyan);
+      color: var(--steel-cyan);
+    }
+
+    .hero-photo {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #ffffff;
+      box-shadow: 0 16px 36px rgba(31, 51, 77, 0.16);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--steel-cyan);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--metal-blue);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .apple-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .apple-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(58, 117, 164, 0.35);
+      box-shadow: 0 12px 28px rgba(31, 51, 77, 0.08);
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--steel-cyan);
+      background: rgba(58, 117, 164, 0.1);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .card-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .card-org {
+      font-size: 13px;
+      color: var(--metal-blue);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-sub);
+      line-height: 1.55;
+    }
+
+    .skills-group {
+      margin-bottom: 22px;
+    }
+
+    .skills-group-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--metal-blue);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--metal-blue);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--card-border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .project-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(44, 62, 80, 0.08);
+    }
+
+    .btn-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--metal-blue);
+      color: #fff;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-live:hover {
+      background: var(--steel-cyan);
+      color: #fff;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--metal-blue);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      color: var(--steel-cyan);
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 30px;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+      nav a {
+        display: none;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body class="index-page">
-
-  <!-- Header -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename">MF</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#services">Especialidades</a></li>
-          <li><a href="#experience">Trayectoria</a></li>
-          <li><a href="#portfolio">Proyectos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="mailto:marifructuosog718@gmail.com">Contactar</a>
-
-    </div>
+  <!-- Navegación -->
+  <header>
+    <a href="#" class="brand">
+      <span class="brand-dot"></span>
+      Maria Fructuoso
+    </a>
+    <nav>
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+      <a href="#certifications" data-i18n="nav.certifications">Certificaciones</a>
+      <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-es" onclick="setLanguage('es')">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+      </div>
+    </nav>
   </header>
 
-  <main class="main">
+  <main>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <div class="container">
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1>Maria Fructuoso</h1>
-            <p class="fs-4 text-white-50">Junior Developer DAW | QA &amp; Automatización</p>
-            <p>Especializada en desarrollo de aplicaciones web y automatización de procesos empresariales con herramientas líderes como Tosca, UiPath y SAP.</p>
-            <div class="d-flex gap-3">
-              <a href="#portfolio" class="btn-get-started">Ver Proyectos</a>
-              <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-light d-flex align-items-center px-4 rounded-pill"><i class="bi bi-github me-2"></i>GitHub</a>
-            </div>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero.badge">Disponible para oportunidades</div>
+        <h1>Maria Fructuoso</h1>
+        <div class="hero-subtitle" data-i18n="hero.role">Junior Developer DAW · QA &amp; Automatización</div>
+        <p class="hero-desc" data-i18n="hero.desc">
+          Especializada en desarrollo web y testing corporativo automatizado con Tricentis Tosca, SAP y UiPath. Orientada a código mantenible y estándares de alta fiabilidad.
+        </p>
+        <div class="hero-cta">
+          <a href="mailto:marifructuosog718@gmail.com" class="btn-apple">
+            <i class="bi bi-envelope"></i>
+            <span data-i18n="hero.contactBtn">Contactar por Email</span>
+          </a>
+          <a href="https://github.com/MariFructuoso" target="_blank" class="btn-apple-secondary">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank" class="btn-apple-secondary">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="perfil.jpg" alt="Maria Fructuoso">
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="exp.eyebrow">Trayectoria</div>
+        <h2 class="section-title" data-i18n="exp.title">Experiencia Profesional</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">QA &amp; RPA</span>
+            <span class="card-date">2026</span>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="IMG_9132.JPG" class="img-fluid rounded-4 shadow-lg border border-3 border-secondary" style="max-height: 420px; object-fit: cover;" alt="Maria Fructuoso">
+          <h3 class="card-title" data-i18n="exp.dxc.role">Prácticas Grado Superior (DAW)</h3>
+          <div class="card-org">DXC Technology</div>
+          <p class="card-desc" data-i18n="exp.dxc.desc">
+            Automatización de procesos y pruebas funcionales integradas en SAP mediante Tricentis Tosca y robots de flujo de trabajo en UiPath.
+          </p>
+        </div>
+
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">IT Support</span>
+            <span class="card-date">2022 — 2023</span>
+          </div>
+          <h3 class="card-title" data-i18n="exp.mm.role">Prácticas Grado Medio (SMR)</h3>
+          <div class="card-org">MediaMarkt</div>
+          <p class="card-desc" data-i18n="exp.mm.desc">
+            Diagnóstico de averías, mantenimiento técnico de sistemas informáticos, reparación de hardware y configuración de software operativo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="education">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="edu.eyebrow">Estudios</div>
+        <h2 class="section-title" data-i18n="edu.title">Formación Académica</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">Grado Superior</span>
+            <span class="card-date">2024 — 2026</span>
+          </div>
+          <h3 class="card-title" data-i18n="edu.daw.name">Desarrollo de Aplicaciones Web (DAW)</h3>
+          <div class="card-org">IES San Vicente</div>
+          <p class="card-desc" data-i18n="edu.daw.desc">
+            Arquitectura cliente/servidor, diseño de APIs REST, interfaces reactivas modernas y gestión de bases de datos relacionales y NoSQL.
+          </p>
+        </div>
+
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">Grado Medio</span>
+            <span class="card-date">2021 — 2023</span>
+          </div>
+          <h3 class="card-title" data-i18n="edu.smr.name">Sistemas Microinformáticos y Redes (SMR)</h3>
+          <div class="card-org">IES San Vicente</div>
+          <p class="card-desc" data-i18n="edu.smr.desc">
+            Administración de redes locales, despliegue y hardening de servidores, seguridad básica y soporte a puestos de trabajo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificaciones Oficiales -->
+    <section id="certifications">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="cert.eyebrow">Credenciales</div>
+        <h2 class="section-title" data-i18n="cert.title">Certificaciones y Cursos</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">Cloud</span>
+            <span class="card-date">2026</span>
+          </div>
+          <h3 class="card-title">AWS Cloud Foundations</h3>
+          <div class="card-org">AWS Academy Graduate</div>
+          <p class="card-desc" data-i18n="cert.aws.desc">Fundamentos de infraestructura, computación elástica, seguridad y servicios gestionados en AWS.</p>
+        </div>
+
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">Testing</span>
+            <span class="card-date">2026</span>
+          </div>
+          <h3 class="card-title">Tosca &amp; qTest Fundamentals</h3>
+          <div class="card-org">Tricentis Academy</div>
+          <p class="card-desc" data-i18n="cert.tosca.desc">Automatización de pruebas sobre SAP y gestión trazable de calidad de software con qTest Explorer.</p>
+        </div>
+
+        <div class="apple-card">
+          <div class="card-meta">
+            <span class="card-tag">AI &amp; RPA</span>
+            <span class="card-date">2026</span>
+          </div>
+          <h3 class="card-title">Agentic Automation</h3>
+          <div class="card-org">UiPath</div>
+          <p class="card-desc" data-i18n="cert.uipath.desc">Conceptos y técnicas para la creación y despliegue de procesos automatizados con agentes inteligentes autónomos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section id="skills">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="skills.eyebrow">Stack</div>
+        <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+      </div>
+
+      <div class="apple-card">
+        <div class="skills-group">
+          <div class="skills-group-title"><i class="bi bi-window"></i> Frontend</div>
+          <div class="pills-container">
+            <span class="pill">Angular</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Tailwind CSS</span>
+            <span class="pill">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title"><i class="bi bi-hdd-network"></i> Backend &amp; Databases</div>
+          <div class="pills-container">
+            <span class="pill">Node.js</span>
+            <span class="pill">PHP</span>
+            <span class="pill">Symfony</span>
+            <span class="pill">Java</span>
+            <span class="pill">C#</span>
+            <span class="pill">SQL / PLSQL</span>
+            <span class="pill">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skills-group" style="margin-bottom: 0;">
+          <div class="skills-group-title"><i class="bi bi-robot"></i> QA, Automation &amp; Tools</div>
+          <div class="pills-container">
+            <span class="pill">Tricentis Tosca</span>
+            <span class="pill">SAP Testing</span>
+            <span class="pill">UiPath RPA</span>
+            <span class="pill">qTest Explorer</span>
+            <span class="pill">Git / GitHub</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sobre mí</h2>
-        <p>Desarrolladora Web graduada con sólida base en frontend, backend y control de calidad de software</p>
+    <!-- Proyectos Destacados -->
+    <section id="projects">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="proj.eyebrow">Portfolio</div>
+        <h2 class="section-title" data-i18n="proj.title">Proyectos Destacados</h2>
       </div>
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Cuento con formación especializada en Desarrollo de Aplicaciones Web (DAW) y Sistemas Microinformáticos y Redes (SMR). Mi experiencia abarca desde el desarrollo de software moderno hasta la automatización de flujos de negocio complejos en entornos corporativos reales.
+      <div class="grid-2">
+        <!-- DailySnap -->
+        <div class="apple-card project-card">
+          <div>
+            <span class="card-tag">Angular · Fullstack</span>
+            <h3 class="card-title" style="margin-top: 8px;">DailySnap — Red Social Multimedia</h3>
+            <p class="card-desc" data-i18n="proj.dailysnap">
+              Plataforma social colaborativa desarrollada en Angular para la publicación y gestión de contenidos diarios, con autenticación, perfiles y componentes reactivos.
             </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Desarrollo frontend y backend con tecnologías web actuales (Angular, TypeScript, Symfony, Java).</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Automatización de pruebas y procesos con Tricentis Tosca y UiPath.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Resolución proactiva de incidencias técnicas y trabajo colaborativo enfocado a calidad.</span></li>
-            </ul>
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card p-4 border-0 shadow-sm bg-light">
-              <h4 class="mb-3">Información clave</h4>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2"><strong>Ubicación:</strong> San Vicente del Raspeig, Alicante</li>
-                <li class="mb-2"><strong>Idiomas:</strong> Castellano (Nativo), Inglés (B1-Intermedio), Valenciano (Intermedio)</li>
-                <li class="mb-2"><strong>Movilidad:</strong> Carnet de conducir (B) y vehículo propio</li>
-                <li class="mb-2"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank">maria-fructuoso</a></li>
-                <li class="mb-2"><strong>GitHub:</strong> <a href="https://github.com/MariFructuoso" target="_blank">MariFructuoso</a></li>
-              </ul>
-              <a href="#contact" class="btn btn-primary align-self-start">Ponte en contacto</a>
-            </div>
+          <div class="project-actions">
+            <a href="https://github.com/MariFructuoso/DailySnap" target="_blank" class="btn-live">
+              <i class="bi bi-github"></i> <span data-i18n="proj.viewRepo">Ver Repositorio</span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Habilidades Técnicas</h2>
-        <p>Stack tecnológico y herramientas con las que trabajo habitualmente</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="p-4 bg-white rounded shadow-sm mb-4">
-              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-code-slash text-primary me-2"></i>Frontend</h4>
-              <p class="text-muted mb-2">HTML5, CSS3, Tailwind CSS, JavaScript (ES6+), TypeScript, Angular</p>
-              <div class="progress mb-3">
-                <span class="skill"><span>HTML &amp; CSS / Tailwind</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress mb-3">
-                <span class="skill"><span>JavaScript / TypeScript</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress">
-                <span class="skill"><span>Angular</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-            </div>
-
-            <div class="p-4 bg-white rounded shadow-sm">
-              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-server text-primary me-2"></i>Backend &amp; Bases de Datos</h4>
-              <p class="text-muted mb-2">NodeJS, PHP, Symfony, Java, C#, SQL, PLSQL, MongoDB</p>
-              <div class="progress mb-3">
-                <span class="skill"><span>NodeJS &amp; PHP / Symfony</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress">
-                <span class="skill"><span>Bases de Datos (SQL &amp; MongoDB)</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-            </div>
+        <!-- Pokédex Explorer -->
+        <div class="apple-card project-card">
+          <div>
+            <span class="card-tag">JavaScript · REST API</span>
+            <h3 class="card-title" style="margin-top: 8px;">Pokédex &amp; Explorador de Criaturas</h3>
+            <p class="card-desc" data-i18n="proj.pokemon">
+              Buscador y catálogo interactivo con consumo de API REST externa, filtros por tipo, renderizado dinámico de estadísticas y diseño responsive.
+            </p>
           </div>
-
-          <div class="col-lg-6">
-            <div class="p-4 bg-white rounded shadow-sm mb-4">
-              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-robot text-primary me-2"></i>QA, RPA &amp; Cloud</h4>
-              <p class="text-muted mb-2">Tricentis Tosca, qTest, UiPath, SAP, AWS Cloud Foundations</p>
-              <div class="progress mb-3">
-                <span class="skill"><span>Tosca &amp; Testing Automatizado (SAP)</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress mb-3">
-                <span class="skill"><span>UiPath &amp; RPA</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress">
-                <span class="skill"><span>AWS Fundamentals</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-            </div>
-
-            <div class="p-4 bg-white rounded shadow-sm">
-              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-lightbulb text-primary me-2"></i>Competencias Clave (Soft Skills)</h4>
-              <div class="d-flex flex-wrap gap-2 pt-2">
-                <span class="badge bg-light text-dark border p-2">Resolución de problemas</span>
-                <span class="badge bg-light text-dark border p-2">Aprendizaje continuo</span>
-                <span class="badge bg-light text-dark border p-2">Trabajo en equipo</span>
-                <span class="badge bg-light text-dark border p-2">Atención al detalle</span>
-                <span class="badge bg-light text-dark border p-2">Adaptación al cambio</span>
-                <span class="badge bg-light text-dark border p-2">Comunicación efectiva</span>
-                <span class="badge bg-light text-dark border p-2">Git &amp; GitHub</span>
-              </div>
-            </div>
+          <div class="project-actions">
+            <a href="https://github.com/MariFructuoso/mi_proyecto_pokemon" target="_blank" class="btn-live">
+              <i class="bi bi-github"></i> <span data-i18n="proj.viewRepo">Ver Repositorio</span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Services / Especialidades Section -->
-    <section id="services" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Áreas de Enfoque</h2>
-        <p>Servicios y disciplinas en las que aporto valor profesional</p>
-      </div>
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-code-square icon"></i></div>
-              <h4><a href="#skills" class="stretched-link">Desarrollo Web Fullstack</a></h4>
-              <p>Construcción de interfaces interactivas y APIs backend robustas con Angular, Node, PHP y arquitecturas escalables.</p>
-            </div>
+        <!-- Proyecto Modular Angular -->
+        <div class="apple-card project-card">
+          <div>
+            <span class="card-tag">Angular · TypeScript</span>
+            <h3 class="card-title" style="margin-top: 8px;">Portal SPA Modular</h3>
+            <p class="card-desc" data-i18n="proj.angular">
+              Aplicación web de página única (SPA) estructurada con inyección de dependencias, gestión de estado local, enrutamiento dinámico y validación de formularios.
+            </p>
           </div>
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-shield-check icon"></i></div>
-              <h4><a href="#experience" class="stretched-link">QA &amp; Automatización</a></h4>
-              <p>Diseño y ejecución de pruebas funcionales y automatizadas utilizando Tricentis Tosca sobre plataformas como SAP y aplicaciones web.</p>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-gear-wide-connected icon"></i></div>
-              <h4><a href="#experience" class="stretched-link">RPA &amp; Automatización Agéntica</a></h4>
-              <p>Optimización y digitalización de flujos de trabajo repetitivos mediante bots de UiPath y agentes de automatización inteligentes.</p>
-            </div>
+          <div class="project-actions">
+            <a href="https://github.com/MariFructuoso/Proyecto-Angular" target="_blank" class="btn-live">
+              <i class="bi bi-github"></i> <span data-i18n="proj.viewRepo">Ver Repositorio</span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Trayectoria: Experiencia, Formación y Certificaciones -->
-    <section id="experience" class="why-us section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Trayectoria &amp; Certificaciones</h2>
-        <p>Experiencia laboral, formación académica y credenciales oficiales</p>
-      </div>
-
-      <div class="container">
-        <div class="row gy-4">
-          <!-- Columna Experiencia y Formación -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="mb-4 text-primary"><i class="bi bi-briefcase me-2"></i>Experiencia Profesional</h3>
-            
-            <div class="card border-0 shadow-sm p-4 mb-3">
-              <span class="badge bg-primary align-self-start mb-2">2026</span>
-              <h5>Prácticas Grado Superior (DAW)</h5>
-              <h6 class="text-muted">DXC Technology</h6>
-              <p class="mb-0">Automatización de procesos con Tricentis Tosca, SAP y UiPath en entorno empresarial corporativo.</p>
-            </div>
-
-            <div class="card border-0 shadow-sm p-4 mb-4">
-              <span class="badge bg-secondary align-self-start mb-2">2022 - 2023</span>
-              <h5>Prácticas Grado Medio (SMR)</h5>
-              <h6 class="text-muted">MediaMarkt</h6>
-              <p class="mb-0">Resolución de incidencias técnicas, reparaciones de hardware, configuración e instalación de software.</p>
-            </div>
-
-            <h3 class="mb-4 text-primary"><i class="bi bi-mortarboard me-2"></i>Formación Académica</h3>
-            <div class="card border-0 shadow-sm p-4 mb-3">
-              <span class="badge bg-success align-self-start mb-2">2023 - 2026</span>
-              <h5>Grado Superior en Desarrollo de Aplicaciones Web (DAW)</h5>
-              <h6 class="text-muted">IES San Vicente</h6>
-            </div>
-            <div class="card border-0 shadow-sm p-4">
-              <span class="badge bg-secondary align-self-start mb-2">2021 - 2023</span>
-              <h5>Grado Medio en Sistemas Microinformáticos y Redes (SMR)</h5>
-              <h6 class="text-muted">IES San Vicente</h6>
-            </div>
+        <!-- Componentes Tailwind -->
+        <div class="apple-card project-card">
+          <div>
+            <span class="card-tag">Tailwind CSS · UI/UX</span>
+            <h3 class="card-title" style="margin-top: 8px;">Librería de Interfaces Responsive</h3>
+            <p class="card-desc" data-i18n="proj.tailwind">
+              Colección de componentes y plantillas adaptativas aplicando metodología utility-first con Tailwind CSS, optimizadas para alta fidelidad visual y rendimiento móvil.
+            </p>
           </div>
-
-          <!-- Columna Certificaciones Oficiales -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="mb-4 text-primary"><i class="bi bi-award me-2"></i>Certificaciones Oficiales</h3>
-
-            <div class="card border-0 shadow-sm p-4 mb-3">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-warning text-dark">AWS Academy</span>
-                <small class="text-muted fw-bold">2026</small>
-              </div>
-              <h5 class="mb-1">AWS Academy Graduate – Cloud Foundations</h5>
-              <p class="text-muted mb-0">Amazon Web Services (AWS) · Fundamentos de computación en la nube, infraestructura y seguridad.</p>
-            </div>
-
-            <div class="card border-0 shadow-sm p-4 mb-3">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-success">Tricentis Academy</span>
-                <small class="text-muted fw-bold">2026</small>
-              </div>
-              <h5 class="mb-1">Tricentis Tosca Fundamentals – Automating SAP Testing</h5>
-              <p class="text-muted mb-0">Certificación oficial en automatización escalable de casos de prueba sobre módulos de SAP.</p>
-            </div>
-
-            <div class="card border-0 shadow-sm p-4 mb-3">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-success">Tricentis Academy</span>
-                <small class="text-muted fw-bold">2026</small>
-              </div>
-              <h5 class="mb-1">Tricentis qTest Fundamentals – Project Creation &amp; Explorer</h5>
-              <p class="text-muted mb-0">Gestión, trazabilidad y visibilidad ágil del ciclo de vida del testing de software.</p>
-            </div>
-
-            <div class="card border-0 shadow-sm p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-info text-dark">UiPath</span>
-                <small class="text-muted fw-bold">2026</small>
-              </div>
-              <h5 class="mb-1">Introduction to Agentic Automation</h5>
-              <p class="text-muted mb-0">Diploma de finalización en agentes autónomos, arquitectura y automatización de procesos modernos.</p>
-            </div>
+          <div class="project-actions">
+            <a href="https://github.com/MariFructuoso/extra-tailwindcss" target="_blank" class="btn-live">
+              <i class="bi bi-github"></i> <span data-i18n="proj.viewRepo">Ver Repositorio</span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Proyectos Destacados</h2>
-        <p>Una selección de proyectos personales y desarrollos técnicos disponibles en GitHub</p>
-      </div>
-
-      <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Todos</li>
-            <li data-filter=".filter-web">Desarrollo Web</li>
-            <li data-filter=".filter-qa">QA &amp; Automation</li>
-          </ul>
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="card h-100 shadow-sm border-0 p-3">
-                <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid rounded mb-3" alt="Web Project">
-                <h4>Aplicación Web Fullstack</h4>
-                <p class="text-muted">Desarrollada con Angular en el frontend y API REST en Node/PHP con base de datos SQL.</p>
-                <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-primary btn-sm mt-auto"><i class="bi bi-github me-1"></i>Ver en GitHub</a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-qa">
-              <div class="card h-100 shadow-sm border-0 p-3">
-                <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid rounded mb-3" alt="QA Automation">
-                <h4>Automatización de Pruebas</h4>
-                <p class="text-muted">Suite de pruebas automatizadas con herramientas de testing y validación de interfaces.</p>
-                <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-primary btn-sm mt-auto"><i class="bi bi-github me-1"></i>Ver en GitHub</a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="card h-100 shadow-sm border-0 p-3">
-                <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid rounded mb-3" alt="Frontend Responsive">
-                <h4>Plataforma Web Responsive</h4>
-                <p class="text-muted">Interfaz maquetada con Tailwind CSS y TypeScript priorizando rendimiento y accesibilidad.</p>
-                <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-primary btn-sm mt-auto"><i class="bi bi-github me-1"></i>Ver en GitHub</a>
-              </div>
-            </div>
-
+        <!-- Backend DWES -->
+        <div class="apple-card project-card">
+          <div>
+            <span class="card-tag">PHP · MySQL · MVC</span>
+            <h3 class="card-title" style="margin-top: 8px;">Arquitectura Backend Servidor (DWES)</h3>
+            <p class="card-desc" data-i18n="proj.dwes">
+              Módulos y endpoints orientados a servidor implementados en PHP nativo y frameworks backend, con conexión a base de datos relacional y autenticación de sesiones.
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contacto</h2>
-        <p>¿Tienes una oportunidad o te gustaría colaborar? No dudes en contactarme</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-5">
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Ubicación</h3>
-                  <p>San Vicente del Raspeig, Alicante (España)</p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p><a href="mailto:marifructuosog718@gmail.com">marifructuosog718@gmail.com</a></p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-linkedin flex-shrink-0"></i>
-                <div>
-                  <h3>LinkedIn</h3>
-                  <p><a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank">linkedin.com/in/maria-fructuoso</a></p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                <i class="bi bi-github flex-shrink-0"></i>
-                <div>
-                  <h3>GitHub</h3>
-                  <p><a href="https://github.com/MariFructuoso" target="_blank">github.com/MariFructuoso</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Nombre</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Asunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Mensaje</label>
-                  <textarea class="form-control" name="message" rows="8" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Cargando...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Tu mensaje ha sido enviado. ¡Muchas gracias!</div>
-
-                  <button type="submit">Enviar Mensaje</button>
-                </div>
-              </div>
-            </form>
+          <div class="project-actions">
+            <a href="https://github.com/MariFructuoso/dwes.local" target="_blank" class="btn-live">
+              <i class="bi bi-github"></i> <span data-i18n="proj.viewRepo">Ver Repositorio</span>
+            </a>
           </div>
         </div>
       </div>
@@ -446,68 +761,115 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer" class="footer">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-6 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Maria Fructuoso</span>
-          </a>
-          <p class="pt-2">Junior Developer DAW | QA &amp; Automatización</p>
-          <div class="footer-contact pt-2">
-            <p>San Vicente del Raspeig, Alicante</p>
-            <p><strong>Email:</strong> <span>marifructuosog718@gmail.com</span></p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Navegación</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Inicio</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#about">Sobre mí</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#skills">Habilidades</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#experience">Trayectoria</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Proyectos</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-3">
-          <h4>Redes Profesionales</h4>
-          <div class="social-links d-flex gap-2 mt-3">
-            <a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/MariFructuoso" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="mailto:marifructuosog718@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maria Fructuoso</strong> <span>Todos los derechos reservados</span></p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+  <footer>
+    <p>© 2026 Maria Fructuoso · San Vicente del Raspeig, Alicante</p>
+    <div style="margin-top: 8px;">
+      <a href="https://github.com/MariFructuoso" target="_blank">GitHub</a> ·
+      <a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank">LinkedIn</a> ·
+      <a href="mailto:marifructuosog718@gmail.com">marifructuosog718@gmail.com</a>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Lógica de Idiomas -->
+  <script>
+    const translations = {
+      es: {
+        "nav.about": "Sobre mí",
+        "nav.experience": "Experiencia",
+        "nav.certifications": "Certificaciones",
+        "nav.skills": "Habilidades",
+        "nav.projects": "Proyectos",
+        "hero.badge": "Disponible para oportunidades",
+        "hero.role": "Junior Developer DAW · QA & Automatización",
+        "hero.desc": "Especializada en desarrollo web y testing corporativo automatizado con Tricentis Tosca, SAP y UiPath. Orientada a código mantenible y estándares de alta fiabilidad.",
+        "hero.contactBtn": "Contactar por Email",
+        "exp.eyebrow": "Trayectoria",
+        "exp.title": "Experiencia Profesional",
+        "exp.dxc.role": "Prácticas Grado Superior (DAW)",
+        "exp.dxc.desc": "Automatización de procesos y pruebas funcionales integradas en SAP mediante Tricentis Tosca y robots de flujo de trabajo en UiPath.",
+        "exp.mm.role": "Prácticas Grado Medio (SMR)",
+        "exp.mm.desc": "Diagnóstico de averías, mantenimiento técnico de sistemas informáticos, reparación de hardware y configuración de software operativo.",
+        "edu.eyebrow": "Estudios",
+        "edu.title": "Formación Académica",
+        "edu.daw.name": "Desarrollo de Aplicaciones Web (DAW)",
+        "edu.daw.desc": "Arquitectura cliente/servidor, diseño de APIs REST, interfaces reactivas modernas y gestión de bases de datos relacionales y NoSQL.",
+        "edu.smr.name": "Sistemas Microinformáticos y Redes (SMR)",
+        "edu.smr.desc": "Administración de redes locales, despliegue y hardening de servidores, seguridad básica y soporte a puestos de trabajo.",
+        "cert.eyebrow": "Credenciales",
+        "cert.title": "Certificaciones y Cursos",
+        "cert.aws.desc": "Fundamentos de infraestructura, computación elástica, seguridad y servicios gestionados en AWS.",
+        "cert.tosca.desc": "Automatización de pruebas sobre SAP y gestión trazable de calidad de software con qTest Explorer.",
+        "cert.uipath.desc": "Conceptos y técnicas para la creación y despliegue de procesos automatizados con agentes inteligentes autónomos.",
+        "skills.eyebrow": "Stack",
+        "skills.title": "Habilidades Técnicas",
+        "proj.eyebrow": "Portfolio",
+        "proj.title": "Proyectos Destacados",
+        "proj.viewRepo": "Ver Repositorio",
+        "proj.dailysnap": "Plataforma social colaborativa desarrollada en Angular para la publicación y gestión de contenidos diarios, con autenticación, perfiles y componentes reactivos.",
+        "proj.pokemon": "Buscador y catálogo interactivo con consumo de API REST externa, filtros por tipo, renderizado dinámico de estadísticas y diseño responsive.",
+        "proj.angular": "Aplicación web de página única (SPA) estructurada con inyección de dependencias, gestión de estado local, enrutamiento dinámico y validación de formularios.",
+        "proj.tailwind": "Colección de componentes y plantillas adaptativas aplicando metodología utility-first con Tailwind CSS, optimizadas para alta fidelidad visual y rendimiento móvil.",
+        "proj.dwes": "Módulos y endpoints orientados a servidor implementados en PHP nativo y frameworks backend, con conexión a base de datos relacional y autenticación de sesiones."
+      },
+      en: {
+        "nav.about": "About",
+        "nav.experience": "Experience",
+        "nav.certifications": "Certifications",
+        "nav.skills": "Skills",
+        "nav.projects": "Projects",
+        "hero.badge": "Available for opportunities",
+        "hero.role": "Junior Web Developer · QA & Automation",
+        "hero.desc": "Specialized in web development and automated enterprise testing using Tricentis Tosca, SAP, and UiPath. Focused on maintainable code and reliable quality standards.",
+        "hero.contactBtn": "Get in touch by Email",
+        "exp.eyebrow": "Career",
+        "exp.title": "Professional Experience",
+        "exp.dxc.role": "Associate Web Developer Intern (DAW)",
+        "exp.dxc.desc": "Process automation and end-to-end functional testing over SAP systems using Tricentis Tosca and UiPath workflows.",
+        "exp.mm.role": "IT Support Technician Intern (SMR)",
+        "exp.mm.desc": "Hardware diagnostics, technical systems servicing, device repairs, and operating system provisioning.",
+        "edu.eyebrow": "Education",
+        "edu.title": "Academic Background",
+        "edu.daw.name": "Higher Vocational Degree in Web Development (DAW)",
+        "edu.daw.desc": "Client-server software architecture, RESTful API development, reactive web frontends, and relational/NoSQL data persistence.",
+        "edu.smr.name": "Vocational Degree in Computer Systems & Networks (SMR)",
+        "edu.smr.desc": "Local area network administration, server hardening, operational security, and workplace tech support.",
+        "cert.eyebrow": "Credentials",
+        "cert.title": "Certifications & Courses",
+        "cert.aws.desc": "Cloud infrastructure fundamentals, elastic computing, security baselines, and managed services in AWS.",
+        "cert.tosca.desc": "Automated testing benches for SAP and traceable quality lifecycle operations via qTest Explorer.",
+        "cert.uipath.desc": "Methodologies and design principles for deploying automated autonomous agentic workflows.",
+        "skills.eyebrow": "Stack",
+        "skills.title": "Technical Skills",
+        "proj.eyebrow": "Portfolio",
+        "proj.title": "Featured Projects",
+        "proj.viewRepo": "View Repository",
+        "proj.dailysnap": "Collaborative social media platform built in Angular for publishing daily content, featuring user authentication, profiles, and reactive state.",
+        "proj.pokemon": "Interactive catalog querying external RESTful APIs with creature filtering, dynamic stats visualization, and responsive design.",
+        "proj.angular": "Single Page Application (SPA) structured with dependency injection, dynamic routing, and modular component architecture.",
+        "proj.tailwind": "Collection of responsive interfaces and layouts utilizing utility-first Tailwind CSS patterns engineered for clean UI performance.",
+        "proj.dwes": "Backend server architecture developed in PHP and relational databases with structured session management and MVC patterns."
+      }
+    };
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/css/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferred_lang', lang);
+    }
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    const savedLang = localStorage.getItem('preferred_lang') || 'es';
+    if (savedLang !== 'es') {
+      setLanguage(savedLang);
+    }
+  </script>
 
 </body>
 </html>
