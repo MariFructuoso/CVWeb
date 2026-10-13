@@ -1,260 +1,513 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Fructuoso | Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fbfbfd; color: #1d1d1f; overflow-x: hidden; }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Maria Fructuoso - Junior Developer & QA Automation</title>
+  <meta name="description" content="Portfolio profesional de Maria Fructuoso: Junior Developer DAW, QA y Automatización de Procesos.">
+  <meta name="keywords" content="Maria Fructuoso, Junior Developer, DAW, QA, Automatización, Tosca, UiPath, Fullstack">
 
-        /* Animaciones Apple Style */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-reveal { animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
-        .delay-1 { animation-delay: 0.2s; opacity: 0; }
-        .delay-2 { animation-delay: 0.4s; opacity: 0; }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .glass { background: rgba(255, 255, 255, 0.72); backdrop-filter: saturate(180%) blur(20px); }
-        .bento-card { transition: all 0.5s cubic-bezier(0.15, 0.83, 0.66, 1); }
-        .bento-card:hover { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.04); }
-    </style>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="antialiased">
 
-    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-200/50">
-        <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between text-xs font-medium tracking-tight">
-            <span>Maria Fructuoso</span>
-            <div class="flex gap-6">
-                <a href="#formacion" class="hover:text-blue-600 transition-colors">Formación</a>
-                <a href="#habilidades" class="hover:text-blue-600 transition-colors">Habilidades</a>
-                <a href="#proyectos" class="hover:text-blue-600 transition-colors">Proyectos</a>
-                <a href="mailto:marifructuosog718@gmail.com" class="bg-black text-white px-3 py-1 rounded-full">Contacto</a>
+<body class="index-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">MF</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#services">Especialidades</a></li>
+          <li><a href="#experience">Trayectoria</a></li>
+          <li><a href="#portfolio">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="mailto:marifructuosog718@gmail.com">Contactar</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Maria Fructuoso</h1>
+            <p class="fs-4 text-white-50">Junior Developer DAW | QA &amp; Automatización</p>
+            <p>Especializada en desarrollo de aplicaciones web y automatización de procesos empresariales con herramientas líderes como Tosca, UiPath y SAP.</p>
+            <div class="d-flex gap-3">
+              <a href="#portfolio" class="btn-get-started">Ver Proyectos</a>
+              <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-light d-flex align-items-center px-4 rounded-pill"><i class="bi bi-github me-2"></i>GitHub</a>
             </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="IMG_9132.JPG" class="img-fluid rounded-4 shadow-lg border border-3 border-secondary" style="max-height: 420px; object-fit: cover;" alt="Maria Fructuoso">
+          </div>
         </div>
-    </nav>
-
-    <header class="pt-32 pb-20 px-6 bg-white">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl animate-reveal border-4 border-white shrink-0">
-                <img src="https://marifructuoso.github.io/CVWeb/perfil.jpg" alt="Maria del Carmen Fructuoso Guerrero" class="w-full h-full object-cover">
-            </div>
-
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter animate-reveal delay-1">
-                    Hola. Soy Maria.
-                </h1>
-                <p class="mt-6 text-xl md:text-2xl text-gray-500 font-light max-w-xl animate-reveal delay-2">
-                    <span class="text-black font-medium">Junior Developer</span> titulada en DAW con experiencia en automatización en <span class="text-black font-medium">DXC Technology</span>.
-                    Me gusta programar, aprender cosas nuevas y trabajar en proyectos donde pueda sumar y ayudar al equipo.
-                </p>
-                <div class="mt-8 flex gap-4 justify-center md:justify-start animate-reveal delay-2">
-                    <a href="https://github.com/MariFructuoso" target="_blank"
-                       class="inline-flex items-center gap-2 bg-black text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-gray-800 transition-colors">
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/maria-fructuoso-1445163a8/" target="_blank"
-                       class="inline-flex items-center gap-2 bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="formacion" class="max-w-5xl mx-auto px-6 py-20">
-        <h2 class="text-3xl font-semibold mb-10 tracking-tight">Formación Académica</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bento-card bg-white rounded-[2rem] p-10 border border-gray-200 flex flex-col justify-center">
-                <h3 class="text-2xl font-bold italic">Grado Superior DAW</h3>
-                <p class="text-gray-500 mt-1">Desarrollo de Aplicaciones Web</p>
-                <p class="text-sm text-gray-400 mt-1">IES San Vicente | 2022-2025</p>
-            </div>
-            <div class="bento-card bg-gray-50 rounded-[2rem] p-10 flex flex-col justify-center">
-                <h3 class="text-xl font-bold">Grado Medio SMR</h3>
-                <p class="text-gray-500">Sistemas Microinformáticos y Redes</p>
-                <p class="text-sm text-gray-400 mt-1">IES San Vicente | 2022</p>
-            </div>
-            <div class="md:col-span-2 bento-card bg-zinc-50 rounded-[2rem] p-6 text-center border border-gray-100">
-                <p class="text-sm text-gray-400">Otras formaciones: Grado de Peluquería y Estética (Centro Esther Lara, 2018)</p>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <section id="habilidades" class="max-w-5xl mx-auto px-6 py-20">
-        <h2 class="text-3xl font-semibold mb-10 tracking-tight">Habilidades Profesionales</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="md:col-span-2 bento-card bg-black rounded-[2rem] p-10 text-white flex flex-col justify-between">
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sobre mí</h2>
+        <p>Desarrolladora Web graduada con sólida base en frontend, backend y control de calidad de software</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              Cuento con formación especializada en Desarrollo de Aplicaciones Web (DAW) y Sistemas Microinformáticos y Redes (SMR). Mi experiencia abarca desde el desarrollo de software moderno hasta la automatización de flujos de negocio complejos en entornos corporativos reales.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Desarrollo frontend y backend con tecnologías web actuales (Angular, TypeScript, Symfony, Java).</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Automatización de pruebas y procesos con Tricentis Tosca y UiPath.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Resolución proactiva de incidencias técnicas y trabajo colaborativo enfocado a calidad.</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card p-4 border-0 shadow-sm bg-light">
+              <h4 class="mb-3">Información clave</h4>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2"><strong>Ubicación:</strong> San Vicente del Raspeig, Alicante</li>
+                <li class="mb-2"><strong>Idiomas:</strong> Castellano (Nativo), Inglés (B1-Intermedio), Valenciano (Intermedio)</li>
+                <li class="mb-2"><strong>Movilidad:</strong> Carnet de conducir (B) y vehículo propio</li>
+                <li class="mb-2"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank">maria-fructuoso</a></li>
+                <li class="mb-2"><strong>GitHub:</strong> <a href="https://github.com/MariFructuoso" target="_blank">MariFructuoso</a></li>
+              </ul>
+              <a href="#contact" class="btn btn-primary align-self-start">Ponte en contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Habilidades Técnicas</h2>
+        <p>Stack tecnológico y herramientas con las que trabajo habitualmente</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-code-slash text-primary me-2"></i>Frontend</h4>
+              <p class="text-muted mb-2">HTML5, CSS3, Tailwind CSS, JavaScript (ES6+), TypeScript, Angular</p>
+              <div class="progress mb-3">
+                <span class="skill"><span>HTML &amp; CSS / Tailwind</span> <i class="val">90%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+              <div class="progress mb-3">
+                <span class="skill"><span>JavaScript / TypeScript</span> <i class="val">80%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+              <div class="progress">
+                <span class="skill"><span>Angular</span> <i class="val">75%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm">
+              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-server text-primary me-2"></i>Backend &amp; Bases de Datos</h4>
+              <p class="text-muted mb-2">NodeJS, PHP, Symfony, Java, C#, SQL, PLSQL, MongoDB</p>
+              <div class="progress mb-3">
+                <span class="skill"><span>NodeJS &amp; PHP / Symfony</span> <i class="val">75%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+              <div class="progress">
+                <span class="skill"><span>Bases de Datos (SQL &amp; MongoDB)</span> <i class="val">80%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-robot text-primary me-2"></i>QA, RPA &amp; Cloud</h4>
+              <p class="text-muted mb-2">Tricentis Tosca, qTest, UiPath, SAP, AWS Cloud Foundations</p>
+              <div class="progress mb-3">
+                <span class="skill"><span>Tosca &amp; Testing Automatizado (SAP)</span> <i class="val">85%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+              <div class="progress mb-3">
+                <span class="skill"><span>UiPath &amp; RPA</span> <i class="val">75%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+              <div class="progress">
+                <span class="skill"><span>AWS Fundamentals</span> <i class="val">70%</i></span>
+                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm">
+              <h4 class="fw-bold text-dark mb-3"><i class="bi bi-lightbulb text-primary me-2"></i>Competencias Clave (Soft Skills)</h4>
+              <div class="d-flex flex-wrap gap-2 pt-2">
+                <span class="badge bg-light text-dark border p-2">Resolución de problemas</span>
+                <span class="badge bg-light text-dark border p-2">Aprendizaje continuo</span>
+                <span class="badge bg-light text-dark border p-2">Trabajo en equipo</span>
+                <span class="badge bg-light text-dark border p-2">Atención al detalle</span>
+                <span class="badge bg-light text-dark border p-2">Adaptación al cambio</span>
+                <span class="badge bg-light text-dark border p-2">Comunicación efectiva</span>
+                <span class="badge bg-light text-dark border p-2">Git &amp; GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Especialidades Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Áreas de Enfoque</h2>
+        <p>Servicios y disciplinas en las que aporto valor profesional</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-code-square icon"></i></div>
+              <h4><a href="#skills" class="stretched-link">Desarrollo Web Fullstack</a></h4>
+              <p>Construcción de interfaces interactivas y APIs backend robustas con Angular, Node, PHP y arquitecturas escalables.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-shield-check icon"></i></div>
+              <h4><a href="#experience" class="stretched-link">QA &amp; Automatización</a></h4>
+              <p>Diseño y ejecución de pruebas funcionales y automatizadas utilizando Tricentis Tosca sobre plataformas como SAP y aplicaciones web.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-gear-wide-connected icon"></i></div>
+              <h4><a href="#experience" class="stretched-link">RPA &amp; Automatización Agéntica</a></h4>
+              <p>Optimización y digitalización de flujos de trabajo repetitivos mediante bots de UiPath y agentes de automatización inteligentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trayectoria: Experiencia, Formación y Certificaciones -->
+    <section id="experience" class="why-us section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Trayectoria &amp; Certificaciones</h2>
+        <p>Experiencia laboral, formación académica y credenciales oficiales</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Columna Experiencia y Formación -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="mb-4 text-primary"><i class="bi bi-briefcase me-2"></i>Experiencia Profesional</h3>
+            
+            <div class="card border-0 shadow-sm p-4 mb-3">
+              <span class="badge bg-primary align-self-start mb-2">2026</span>
+              <h5>Prácticas Grado Superior (DAW)</h5>
+              <h6 class="text-muted">DXC Technology</h6>
+              <p class="mb-0">Automatización de procesos con Tricentis Tosca, SAP y UiPath en entorno empresarial corporativo.</p>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 mb-4">
+              <span class="badge bg-secondary align-self-start mb-2">2022 - 2023</span>
+              <h5>Prácticas Grado Medio (SMR)</h5>
+              <h6 class="text-muted">MediaMarkt</h6>
+              <p class="mb-0">Resolución de incidencias técnicas, reparaciones de hardware, configuración e instalación de software.</p>
+            </div>
+
+            <h3 class="mb-4 text-primary"><i class="bi bi-mortarboard me-2"></i>Formación Académica</h3>
+            <div class="card border-0 shadow-sm p-4 mb-3">
+              <span class="badge bg-success align-self-start mb-2">2023 - 2026</span>
+              <h5>Grado Superior en Desarrollo de Aplicaciones Web (DAW)</h5>
+              <h6 class="text-muted">IES San Vicente</h6>
+            </div>
+            <div class="card border-0 shadow-sm p-4">
+              <span class="badge bg-secondary align-self-start mb-2">2021 - 2023</span>
+              <h5>Grado Medio en Sistemas Microinformáticos y Redes (SMR)</h5>
+              <h6 class="text-muted">IES San Vicente</h6>
+            </div>
+          </div>
+
+          <!-- Columna Certificaciones Oficiales -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="mb-4 text-primary"><i class="bi bi-award me-2"></i>Certificaciones Oficiales</h3>
+
+            <div class="card border-0 shadow-sm p-4 mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-warning text-dark">AWS Academy</span>
+                <small class="text-muted fw-bold">2026</small>
+              </div>
+              <h5 class="mb-1">AWS Academy Graduate – Cloud Foundations</h5>
+              <p class="text-muted mb-0">Amazon Web Services (AWS) · Fundamentos de computación en la nube, infraestructura y seguridad.</p>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-success">Tricentis Academy</span>
+                <small class="text-muted fw-bold">2026</small>
+              </div>
+              <h5 class="mb-1">Tricentis Tosca Fundamentals – Automating SAP Testing</h5>
+              <p class="text-muted mb-0">Certificación oficial en automatización escalable de casos de prueba sobre módulos de SAP.</p>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-success">Tricentis Academy</span>
+                <small class="text-muted fw-bold">2026</small>
+              </div>
+              <h5 class="mb-1">Tricentis qTest Fundamentals – Project Creation &amp; Explorer</h5>
+              <p class="text-muted mb-0">Gestión, trazabilidad y visibilidad ágil del ciclo de vida del testing de software.</p>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-info text-dark">UiPath</span>
+                <small class="text-muted fw-bold">2026</small>
+              </div>
+              <h5 class="mb-1">Introduction to Agentic Automation</h5>
+              <p class="text-muted mb-0">Diploma de finalización en agentes autónomos, arquitectura y automatización de procesos modernos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Proyectos Destacados</h2>
+        <p>Una selección de proyectos personales y desarrollos técnicos disponibles en GitHub</p>
+      </div>
+
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Todos</li>
+            <li data-filter=".filter-web">Desarrollo Web</li>
+            <li data-filter=".filter-qa">QA &amp; Automation</li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="card h-100 shadow-sm border-0 p-3">
+                <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid rounded mb-3" alt="Web Project">
+                <h4>Aplicación Web Fullstack</h4>
+                <p class="text-muted">Desarrollada con Angular en el frontend y API REST en Node/PHP con base de datos SQL.</p>
+                <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-primary btn-sm mt-auto"><i class="bi bi-github me-1"></i>Ver en GitHub</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-qa">
+              <div class="card h-100 shadow-sm border-0 p-3">
+                <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid rounded mb-3" alt="QA Automation">
+                <h4>Automatización de Pruebas</h4>
+                <p class="text-muted">Suite de pruebas automatizadas con herramientas de testing y validación de interfaces.</p>
+                <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-primary btn-sm mt-auto"><i class="bi bi-github me-1"></i>Ver en GitHub</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="card h-100 shadow-sm border-0 p-3">
+                <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid rounded mb-3" alt="Frontend Responsive">
+                <h4>Plataforma Web Responsive</h4>
+                <p class="text-muted">Interfaz maquetada con Tailwind CSS y TypeScript priorizando rendimiento y accesibilidad.</p>
+                <a href="https://github.com/MariFructuoso" target="_blank" class="btn btn-outline-primary btn-sm mt-auto"><i class="bi bi-github me-1"></i>Ver en GitHub</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contacto</h2>
+        <p>¿Tienes una oportunidad o te gustaría colaborar? No dudes en contactarme</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-blue-400">Modern Web Stack</h3>
-                    <p class="text-lg text-gray-300">HTML, CSS, Tailwind, JavaScript, TypeScript, Angular y NodeJS.</p>
+                  <h3>Ubicación</h3>
+                  <p>San Vicente del Raspeig, Alicante (España)</p>
                 </div>
-                <div class="mt-6 text-xs font-mono text-gray-500 tracking-widest uppercase italic">Front-end & Logic</div>
-            </div>
+              </div>
 
-            <div class="bento-card bg-white rounded-[2rem] p-10 border border-gray-100">
-                <h3 class="font-bold text-gray-400 uppercase text-xs tracking-widest mb-4">Databases</h3>
-                <p class="text-lg font-semibold">PLSQL, SQL y MongoDB.</p>
-            </div>
-
-            <div class="bento-card bg-blue-600 rounded-[2rem] p-10 text-white">
-                <h3 class="font-bold uppercase text-xs tracking-widest mb-4 opacity-70">Control</h3>
-                <p class="text-2xl font-bold">Git & GitHub</p>
-            </div>
-
-            <div class="bento-card bg-zinc-100 rounded-[2rem] p-10">
-                <h3 class="text-xl font-semibold mb-2">Desarrollo de Software</h3>
-                <p class="text-gray-600">Dominio de Java, C#, PHP y Symfony para soluciones robustas.</p>
-            </div>
-
-            <div class="bento-card bg-purple-600 rounded-[2rem] p-10 text-white">
-                <h3 class="font-bold uppercase text-xs tracking-widest mb-4 opacity-70">QA & Automatización</h3>
-                <p class="text-lg font-semibold">Tosca, SAP, UiPath</p>
-            </div>
-
-            <div class="md:col-span-2 bento-card bg-white rounded-[2rem] p-10 border border-gray-100 flex flex-col justify-center">
-                <h3 class="font-bold text-gray-400 uppercase text-xs tracking-widest mb-4">Soft Skills</h3>
-                <p class="text-xl italic text-gray-600">"Capacidad de adaptación, trabajo en equipo y gestión eficiente del tiempo."</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="proyectos" class="max-w-5xl mx-auto px-6 py-20">
-        <h2 class="text-3xl font-semibold mb-10 tracking-tight">Proyectos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <!-- DailySnap - Proyecto final destacado -->
-            <div class="md:col-span-2 bento-card bg-black rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between gap-8">
-                <div class="flex-1">
-                    <span class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3 block">Proyecto Final DAW</span>
-                    <h3 class="text-2xl font-bold mb-3">DailySnap</h3>
-                    <p class="text-gray-300 mb-6">Red social de fotografía diaria con Angular. Incluye feed, perfiles de usuario, vista de publicación individual y chat en tiempo real.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">Angular</span>
-                        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">TypeScript</span>
-                        <span class="bg-white/10 text-white text-xs px-3 py-1 rounded-full">Tailwind</span>
-                    </div>
-                </div>
-                <div class="flex items-end">
-                    <a href="https://github.com/MariFructuoso/DailySnap" target="_blank"
-                       class="inline-flex items-center gap-2 bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-100 transition-colors">
-                        Ver en GitHub →
-                    </a>
-                </div>
-            </div>
-
-            <!-- Pokémon Symfony -->
-            <div class="bento-card bg-white rounded-[2rem] p-8 border border-gray-100 flex flex-col justify-between">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 block">Entorno Servidor</span>
-                    <h3 class="text-xl font-bold mb-2">Pokémon Web App</h3>
-                    <p class="text-gray-500 text-sm mb-5">Aplicación web con Symfony y PHP. BBDD con migraciones, plantillas Twig y Docker.</p>
-                    <div class="flex flex-wrap gap-2 mb-5">
-                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">PHP</span>
-                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Symfony</span>
-                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Twig</span>
-                        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Docker</span>
-                    </div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:marifructuosog718@gmail.com">marifructuosog718@gmail.com</a></p>
                 </div>
-                <a href="https://github.com/MariFructuoso/mi_proyecto_pokemon" target="_blank"
-                   class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline">
-                    Ver en GitHub →
-                </a>
-            </div>
+              </div>
 
-            <!-- Proyecto Angular Inmobiliaria -->
-            <div class="bento-card bg-gray-50 rounded-[2rem] p-8 flex flex-col justify-between">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-linkedin flex-shrink-0"></i>
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 block">Entorno Cliente</span>
-                    <h3 class="text-xl font-bold mb-2">Inmosanvi</h3>
-                    <p class="text-gray-500 text-sm mb-5">Aplicación inmobiliaria SPA desarrollada con Angular y TypeScript.</p>
-                    <div class="flex flex-wrap gap-2 mb-5">
-                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">Angular</span>
-                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">TypeScript</span>
-                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">CSS</span>
-                    </div>
+                  <h3>LinkedIn</h3>
+                  <p><a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank">linkedin.com/in/maria-fructuoso</a></p>
                 </div>
-                <a href="https://github.com/MariFructuoso/Proyecto-Angular" target="_blank"
-                   class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline">
-                    Ver en GitHub →
-                </a>
-            </div>
+              </div>
 
-            <!-- BasketLeagueManager -->
-            <div class="md:col-span-2 bento-card bg-zinc-100 rounded-[2rem] p-8 flex flex-col md:flex-row justify-between gap-8">
-                <div class="flex-1">
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 block">Despliegue de Aplicaciones Web</span>
-                    <h3 class="text-xl font-bold mb-2">BasketLeague Manager</h3>
-                    <p class="text-gray-600 text-sm mb-5">Gestor de liga de baloncesto con Node.js. Autenticación de usuarios, gestión de equipos y sistema de rutas.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">Node.js</span>
-                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">JavaScript</span>
-                        <span class="bg-white text-gray-600 text-xs px-3 py-1 rounded-full border border-gray-200">Nunjucks</span>
-                    </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-github flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p><a href="https://github.com/MariFructuoso" target="_blank">github.com/MariFructuoso</a></p>
                 </div>
-                <div class="flex items-end">
-                    <a href="https://github.com/MariFructuoso/BasketLeagueManager" target="_blank"
-                       class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline">
-                        Ver en GitHub →
-                    </a>
-                </div>
+              </div>
             </div>
+          </div>
 
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Nombre</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Asunto</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Mensaje</label>
+                  <textarea class="form-control" name="message" rows="8" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Cargando...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Tu mensaje ha sido enviado. ¡Muchas gracias!</div>
+
+                  <button type="submit">Enviar Mensaje</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="experiencia" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-semibold mb-16 tracking-tight">Experiencia</h2>
-            <div class="space-y-16">
+  </main>
 
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="w-32 text-gray-400 font-medium">2024 — 2025</div>
-                    <div class="flex-1 border-l-2 border-blue-200 pl-8">
-                        <h3 class="text-xl font-bold">DXC Technology</h3>
-                        <p class="text-blue-600 text-sm font-medium">Prácticas Grado Superior (DAW)</p>
-                        <p class="text-gray-500 mt-4 max-w-2xl">Automatización de procesos con Tosca, SAP y UiPath en entorno empresarial.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="w-32 text-gray-400 font-medium">2022 — 2023</div>
-                    <div class="flex-1 border-l-2 border-gray-100 pl-8">
-                        <h3 class="text-xl font-bold">MediaMarkt</h3>
-                        <p class="text-blue-600 text-sm font-medium">Prácticas Grado Medio (SMR)</p>
-                        <p class="text-gray-500 mt-4 max-w-2xl">Resolución de incidencias técnicas, reparaciones básicas e instalación de software.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-8 opacity-60">
-                    <div class="w-32 text-gray-400 font-medium italic text-xs uppercase">Trayectoria Previa</div>
-                    <div class="flex-1 border-l-2 border-gray-100 pl-8">
-                        <h3 class="text-lg font-semibold">Atención al cliente y servicios</h3>
-                        <p class="text-gray-500 text-sm">Telepizza, XJump, Peluquerías Yomis.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Maria Fructuoso</span>
+          </a>
+          <p class="pt-2">Junior Developer DAW | QA &amp; Automatización</p>
+          <div class="footer-contact pt-2">
+            <p>San Vicente del Raspeig, Alicante</p>
+            <p><strong>Email:</strong> <span>marifructuosog718@gmail.com</span></p>
+          </div>
         </div>
-    </section>
 
-    <footer class="py-10 px-6 border-t border-gray-100">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex gap-8 text-sm text-gray-500">
-                <span>Castellano — Nativo</span>
-                <span>Inglés — B1</span>
-                <span>Valenciano — Intermedio</span>
-            </div>
-            <div class="flex items-center gap-6">
-                <a href="https://github.com/MariFructuoso" target="_blank" class="text-sm text-gray-500 hover:text-black transition-colors">GitHub</a>
-                <a href="https://www.linkedin.com/in/maria-fructuoso-1445163a8/" target="_blank" class="text-sm text-gray-500 hover:text-blue-600 transition-colors">LinkedIn</a>
-                <a href="mailto:marifructuosog718@gmail.com" class="text-sm font-semibold hover:text-blue-600 transition-colors">marifructuosog718@gmail.com</a>
-            </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Sobre mí</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#skills">Habilidades</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#experience">Trayectoria</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Proyectos</a></li>
+          </ul>
         </div>
-    </footer>
+
+        <div class="col-lg-3 col-md-3">
+          <h4>Redes Profesionales</h4>
+          <div class="social-links d-flex gap-2 mt-3">
+            <a href="https://linkedin.com/in/maria-fructuoso-1445163a8" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/MariFructuoso" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="mailto:marifructuosog718@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maria Fructuoso</strong> <span>Todos los derechos reservados</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/css/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>
